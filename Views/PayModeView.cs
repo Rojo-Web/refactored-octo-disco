@@ -27,7 +27,8 @@ namespace Supermarket_mvp.Views
         private void AssociateAndRaiseViewEvents()
         {
             BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            TxtSearch.KeyDown += (s, e) => {
+            TxtSearch.KeyDown += (s, e) =>
+            {
                 if (e.KeyCode == Keys.Enter)
                 {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
@@ -35,7 +36,7 @@ namespace Supermarket_mvp.Views
             };
         }
 
-        public string PayModelId { get { return TxtPayModeId.Text; } set {TxtPayModeId.Text= value;} }
+        public string PayModelId { get { return TxtPayModeId.Text; } set { TxtPayModeId.Text = value; } }
         public string PayModeName { get { return TxtPayModeName.Text; } set { TxtPayModeName.Text = value; } }
         public string PayModeObservation { get { return TxtPayModeObservation.Text; } set { TxtPayModeObservation.Text = value; } }
         public string SearchValue { get { return TxtSearch.Text; } set { TxtSearch.Text = value; } }
@@ -52,7 +53,25 @@ namespace Supermarket_mvp.Views
 
         public void SetPayModelListBildingSource(BindingSource payModeList)
         {
-            DgPayMode.DataSource= payModeList;
+            DgPayMode.DataSource = payModeList;
+        }
+
+        private static PayModeView instance;
+        public static PayModeView GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PayModeView();
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
         }
 
         private void PayModeView_Load(object sender, EventArgs e)
