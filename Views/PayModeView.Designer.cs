@@ -129,6 +129,7 @@
             BtnClose.Size = new Size(234, 49);
             BtnClose.TabIndex = 7;
             BtnClose.UseVisualStyleBackColor = true;
+            BtnClose.Click += BtnClose_Click;
             // 
             // BtnDelete
             // 

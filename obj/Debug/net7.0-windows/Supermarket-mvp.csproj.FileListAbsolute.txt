@@ -42,3 +42,4 @@ D:\Cuarto Semestre\Lenguaje informatico\Consolidado 2\Parcial\Supermarket-mvp\Su
 D:\Cuarto Semestre\Lenguaje informatico\Consolidado 2\Parcial\Supermarket-mvp\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket-mvp.csproj.AssemblyReference.cache
 D:\Cuarto Semestre\Lenguaje informatico\Consolidado 2\Parcial\Supermarket-mvp\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket-mvp.csproj.CopyComplete
 D:\Cuarto Semestre\Lenguaje informatico\Consolidado 2\Parcial\Supermarket-mvp\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.MainView.resources
+D:\Cuarto Semestre\Lenguaje informatico\Consolidado 2\Parcial\Supermarket-mvp\Supermarket-mvp\obj\Debug\net7.0-windows\Supermarket_mvp.Views.CategoriasView.resources
