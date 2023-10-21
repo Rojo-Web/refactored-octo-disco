@@ -24,7 +24,7 @@ namespace Supermarket_mvp.Models
         [DisplayName("Precio")]
         [Required(ErrorMessage = "Productos precio is required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Productos precio must be between 3 and 50 characters")]
-        public double Precio { get; set; }
+        public int Precio { get; set; }
 
         [DisplayName("Stock")]
         [Required(ErrorMessage = "Productos Stock is required")]
@@ -35,8 +35,5 @@ namespace Supermarket_mvp.Models
         [Required(ErrorMessage = "Productos Categoria is required")]
         public string Categoria { get; set; }
 
-        [DisplayName("Proveedores")]
-        [Required(ErrorMessage = "Productos Proveedores is required")]
-        public string Proveedores { get; set; }
     }
 }
