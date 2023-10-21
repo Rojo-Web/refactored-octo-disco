@@ -29,14 +29,14 @@ namespace Supermarket_mvp.Presenters
             this.view.SaveEvent += Saved;
             this.view.CancelEvent += CancelAction;
 
-            this.view.SetPayModelListBildingSource(categoriaBindingSource);
+            this.view.SetCategoriaListBildingSource(categoriaBindingSource);
 
-            loadAllPayModeList();
+            loadAllCategoriaList();
 
             this.view.Show();
         }
 
-        private void loadAllPayModeList()
+        private void loadAllCategoriaList()
         {
             categoriaList = repository.GetAll();
             categoriaBindingSource.DataSource = categoriaList;
@@ -74,7 +74,7 @@ namespace Supermarket_mvp.Presenters
                     view.Message = "Categoria added successfuly";
                 }
                 view.IsSuccessful = true;
-                loadAllPayModeList();
+                loadAllCategoriaList();
                 CleanViewFields();
             }
             catch (Exception ex)
@@ -93,7 +93,7 @@ namespace Supermarket_mvp.Presenters
                 repository.delete(categoria.Id);
                 view.IsSuccessful = true;
                 view.Message = "Categoria Deleted Successfuly";
-                loadAllPayModeList();
+                loadAllCategoriaList();
             }
             catch (Exception ex)
             {

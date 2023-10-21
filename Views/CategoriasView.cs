@@ -108,7 +108,7 @@ namespace Supermarket_mvp.Views
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
-        public void SetPayModelListBildingSource(BindingSource categoriaList)
+        public void SetCategoriaListBildingSource(BindingSource categoriaList)
         {
             DgCategoria.DataSource = categoriaList;
         }

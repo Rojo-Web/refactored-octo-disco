@@ -15,7 +15,10 @@ namespace Supermarket_mvp.Views
         public MainView()
         {
             InitializeComponent();
+
+            //Aqui hay que añadir los botones con las clases del main view
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
+            BtnCategorias.Click += delegate { ShowCategoriaView?.Invoke(this, EventArgs.Empty); };
 
             BtnExit.Click += delegate { this.Close(); };
         }
@@ -23,5 +26,6 @@ namespace Supermarket_mvp.Views
         public event EventHandler ShowPayModeView;
         public event EventHandler ShowProductView;
         public event EventHandler ShowCustomerView;
+        public event EventHandler ShowCategoriaView;
     }
 }

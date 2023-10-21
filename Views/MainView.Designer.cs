@@ -32,12 +32,14 @@
             BtnExit = new Button();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
+            BtnCategorias = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnCategorias);
             panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
             panel1.Controls.Add(pictureBox1);
@@ -78,6 +80,16 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // BtnCategorias
+            // 
+            BtnCategorias.BackgroundImage = Properties.Resources.categorias;
+            BtnCategorias.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCategorias.Location = new Point(3, 150);
+            BtnCategorias.Name = "BtnCategorias";
+            BtnCategorias.Size = new Size(244, 73);
+            BtnCategorias.TabIndex = 3;
+            BtnCategorias.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -99,5 +111,6 @@
         private Button BtnPayMode;
         private PictureBox pictureBox1;
         private Button BtnExit;
+        private Button BtnCategorias;
     }
 }
