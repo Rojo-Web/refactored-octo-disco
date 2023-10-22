@@ -22,18 +22,14 @@ namespace Supermarket_mvp.Models
         public string Name { get; set; }
 
         [DisplayName("Precio")]
-        [Required(ErrorMessage = "Productos precio is required")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Productos precio must be between 3 and 50 characters")]
         public int Precio { get; set; }
 
         [DisplayName("Stock")]
-        [Required(ErrorMessage = "Productos Stock is required")]
         public int Stock { get; set; }
 
         //Para los combos
         [DisplayName("Categoria")]
-        [Required(ErrorMessage = "Productos Categoria is required")]
-        public string Categoria { get; set; }
+        public int Categoria { get; set; }
 
     }
 }

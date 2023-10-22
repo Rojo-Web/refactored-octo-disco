@@ -13,6 +13,7 @@ namespace Supermarket_mvp.Views
         event EventHandler ShowCustomerView;
         event EventHandler ShowCategoriaView;
         event EventHandler ShowProveedorView;
+        event EventHandler ShowProductosView;
         //los demas
     }
 }

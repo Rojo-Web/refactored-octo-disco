@@ -23,6 +23,7 @@ namespace Supermarket_mvp.Presenters
             this.mainView.ShowPayModeView += ShowPayModeView;
             this.mainView.ShowCategoriaView += ShowCategoriaView;
             this.mainView.ShowProveedorView += ShowProveedorView;
+            this.mainView.ShowProductosView += ShowProductosView;
         }
 
         private void ShowPayModeView(object? sender, EventArgs e)
@@ -44,6 +45,13 @@ namespace Supermarket_mvp.Presenters
             IProveedoresView view = ProveedoresView.GetInstance((MainView)mainView);
             IProveedoresRepository repository = new ProveedoresRepository(sqlConnectionString);
             new ProveedoresPresenter(view, repository);
+        }
+
+        private void ShowProductosView(object? sender, EventArgs e)
+        {
+            IProductosView view = ProductosView.GetInstance((MainView)mainView);
+            IProductosRepository repository = new ProductosRepository(sqlConnectionString);
+            new ProductosPresenter(view, repository);
         }
 
         //Añadir los metedos conforme a las clases 

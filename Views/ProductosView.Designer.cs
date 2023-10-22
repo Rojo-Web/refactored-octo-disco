@@ -47,7 +47,6 @@
             label3 = new Label();
             comboCategorias = new ComboBox();
             label2 = new Label();
-            nUpDownStock = new NumericUpDown();
             TxtPrecio = new TextBox();
             label1 = new Label();
             BtnCancel = new Button();
@@ -58,13 +57,13 @@
             lblDescripcion = new Label();
             lblName = new Label();
             lblId = new Label();
+            nUpDownStock = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgProductos).BeginInit();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nUpDownStock).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -226,10 +225,10 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(nUpDownStock);
             tabPage2.Controls.Add(label3);
             tabPage2.Controls.Add(comboCategorias);
             tabPage2.Controls.Add(label2);
-            tabPage2.Controls.Add(nUpDownStock);
             tabPage2.Controls.Add(TxtPrecio);
             tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(BtnCancel);
@@ -273,13 +272,6 @@
             label2.Size = new Size(109, 20);
             label2.TabIndex = 27;
             label2.Text = "Producto Stock";
-            // 
-            // nUpDownStock
-            // 
-            nUpDownStock.Location = new Point(624, 40);
-            nUpDownStock.Name = "nUpDownStock";
-            nUpDownStock.Size = new Size(150, 27);
-            nUpDownStock.TabIndex = 26;
             // 
             // TxtPrecio
             // 
@@ -371,6 +363,14 @@
             lblId.TabIndex = 16;
             lblId.Text = "Producto Id";
             // 
+            // nUpDownStock
+            // 
+            nUpDownStock.Location = new Point(624, 40);
+            nUpDownStock.Name = "nUpDownStock";
+            nUpDownStock.PlaceholderText = "Stock";
+            nUpDownStock.Size = new Size(125, 27);
+            nUpDownStock.TabIndex = 31;
+            // 
             // ProductosView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -389,7 +389,6 @@
             ((System.ComponentModel.ISupportInitialize)DgProductos).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nUpDownStock).EndInit();
             ResumeLayout(false);
         }
 
@@ -420,8 +419,8 @@
         private TextBox TxtPrecio;
         private Label label1;
         private Label label3;
-        private ComboBox comboCategorias;
         private Label label2;
-        private NumericUpDown nUpDownStock;
+        private TextBox nUpDownStock;
+        public static ComboBox comboCategorias;
     }
 }

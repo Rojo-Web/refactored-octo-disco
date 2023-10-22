@@ -11,8 +11,8 @@ namespace Supermarket_mvp.Views
 
         string ProductoId { get; set; }
         string ProductoName { get; set; }
-        int ProductoPrecio { get; set; }
-        int ProductoStock { get; set; }
+        string ProductoPrecio { get; set; }
+        string ProductoStock { get; set; }
 
         string ProductoCategoria { get; set; }
 
@@ -29,7 +29,7 @@ namespace Supermarket_mvp.Views
         event EventHandler CancelEvent;
 
 
-        void SetProductosListBildingSource(BindingSource categoriaList);
+        void SetProductosListBildingSource(BindingSource productosList);
         void Show();
 
     }

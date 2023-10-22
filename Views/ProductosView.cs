@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Supermarket_mvp._Repositories;
+using Supermarket_mvp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,11 +99,11 @@ namespace Supermarket_mvp.Views
         public string ProductoId { get { return TxtId.Text; } set { TxtId.Text = value; } }
         public string ProductoName { get { return TxtName.Text; } set { TxtName.Text = value; } }
 
-        public int ProductoPrecio { get { return Convert.ToInt32(TxtPrecio.Text); } set { TxtPrecio.Text = Convert.ToString(value); } }
+        public string ProductoPrecio { get { return TxtPrecio.Text; } set { TxtPrecio.Text = value; } }
 
         //Cambio importantes
-        public int ProductoStock { get { return Convert.ToInt32(nUpDownStock.Value); } set { nUpDownStock.Value = Convert.ToInt32(value); } }
-        public string ProductoCategoria { get { return comboCategorias.Text; } set { comboCategorias.SelectedIndex = Convert.ToInt32(value); } }
+        public string ProductoStock { get { return nUpDownStock.Text; } set { nUpDownStock.Text = value; } }
+        public string ProductoCategoria { get { return comboCategorias.Text; } set { comboCategorias.Text = value; } }
         //------------------
 
         public string SearchValue { get { return TxtSearch.Text; } set { TxtSearch.Text = value; } }
@@ -123,6 +125,7 @@ namespace Supermarket_mvp.Views
         public void SetProductosListBildingSource(BindingSource productosList)
         {
             DgProductos.DataSource = productosList;
+
         }
 
 
